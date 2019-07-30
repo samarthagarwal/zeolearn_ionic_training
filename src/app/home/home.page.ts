@@ -8,31 +8,17 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   trainingName: string = "Ionic Framework Training";
-  visibility: boolean = true;
-
-  people: any[] = [{
-    "name": "Samarth",
-    "age": 28
-  }, {
-    "name": "James",
-    "age": 23
-  }, {
-    "name": "Bob",
-    "age": 12
-  }, {
-    "name": "Alice",
-    "age": 32
-  }, {
-    "name": "Travis",
-    "age": 29
-  }];
+  yourName: string = "Zeolearn";
+  tnc: boolean = false;
+  gender: string = "female";
+  city: string = "New Delhi";
   
   constructor() {
 
   }
 
-  toggleVisibility() : void {
-    this.visibility = !this.visibility;
+  printName(): void {
+    console.log(this.city);
   }
 
 }

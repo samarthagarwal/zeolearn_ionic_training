@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "avatar": "https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg/220px-Matt_LeBlanc_as_Joey_Tribbiani.jpg",
+            "name": "Joey F. Tribbiani",
+            "description": "Played by Matt LeBlanc",
+            "long_description": "Joey is portrayed as promiscuous, and dim-witted, but good-natured, as well as very loyal, caring, and protective of his friends. He's a food-loving womanizer who has had more luck with dates than any of the other group members. In contrast to his 'ladies man' personality, he has also a marked childish side.",
+            "image": "https://media.giphy.com/media/duzpaTbCUy9Vu/giphy-downsized.gif",
+            "rating_a": 95,
+            "rating_b": 90,
+            "rating_c": 70
+        },
+        {
+            "avatar": "http://pixel.nymag.com/imgs/daily/vulture/2017/03/30/30-chandler-bing.w190.h190.2x.jpg",
+            "name": "Chandler M. Bing",
+            "description": "Played by Matthew Perry",
+            "long_description": "Chandler is brash, zany, and estranged from both of his parents. He suffers from commitment issues, brought on by growing up in a broken home with no idea of what a stable marriage looks like, can be neurotic and extremely defensive, with humour as his shield. Chandler also associates everything that links to his parents' divorce in a negative light, specifically Thanksgiving where his parents reveal their separation over a turkey where his father plans to run away with the bus boy.",
+            "image": "https://media.giphy.com/media/oaEcH0gKPJ2wM/source.gif",
+            "rating_a": 95,
+            "rating_b": 90,
+            "rating_c": 70
+        },
+        {
+            "avatar": "https://upload.wikimedia.org/wikipedia/en/d/d0/Courteney_Cox_as_Monica_Geller.jpg",
+            "name": "Monica E. Geller",
+            "description": "Played by Courteney Cox",
+            "long_description": "The creators' first choice for the role of Monica was comedian Janeane Garofalo. Cox had originally been offered the role of Rachel but declined in favor of playing the character's best friend Monica because she was drawn to her strong personality.",
+            "image": "https://media.giphy.com/media/HGEiJZcovtb1e/giphy.gif",
+            "rating_a": 95,
+            "rating_b": 90,
+            "rating_c": 70
+        },
+        {
+            "avatar": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/David_Schwimmer_as_Ross_Geller.jpg/220px-David_Schwimmer_as_Ross_Geller.jpg",
+            "name": "Ross E. Geller",
+            "description": "Played by David Schwimmer",
+            "long_description": "Ross is a paleontologist and has a Ph.D. from Columbia University. His romantic feelings toward Rachel Green, which began as a high school infatuation, are an ongoing theme of his narrative arc. Likewise, their on-again, off-again romantic relationship is a nearly constant theme of Friends.",
+            "image": "https://media.giphy.com/media/XZ0yPco3eynUAGU0i3/source.gif",
+            "rating_a": 95,
+            "rating_b": 90,
+            "rating_c": 70
+        },
+        {
+            "avatar": "https://vignette.wikia.nocookie.net/friends/images/9/98/Rachel_4.png/revision/latest/scale-to-width-down/200?cb=20190210053843",
+            "name": "Rachael K. Green",
+            "description": "Played by Jennifer Aniston",
+            "long_description": "Rachel is considered to be Aniston's breakout role, credited with making her the show's most famous cast member and for spawning her successful film career. Praised for her performance as Rachel, Aniston won both an Emmy Award for Outstanding Lead Actress in a Comedy Series and a Golden Globe Award for Best Performance by an Actress In A Television Series – Comedy Or Musical.",
+            "image": "https://media.giphy.com/media/VZXuygf0oUb5u/source.gif",
+            "rating_a": 95,
+            "rating_b": 90,
+            "rating_c": 70
+        },
+        {
+            "avatar": "https://upload.wikimedia.org/wikipedia/en/f/f6/Friendsphoebe.jpg",
+            "name": "Phoebe Buffay",
+            "description": "Played by Lisa Kudrow",
+            "long_description": "For her portrayal of Phoebe Buffay, Kudrow received a Golden Globe Award nomination and won a Primetime Emmy Award, a Screen Actors Guild Award, a Satellite Award, and an American Comedy Award.",
+            "image": "https://media.giphy.com/media/JGH2CwqB4oqGc/giphy.gif",
+            "rating_a": 95,
+            "rating_b": 90,
+            "rating_c": 70
+        }
+    ]
+}

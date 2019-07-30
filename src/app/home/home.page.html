@@ -6,47 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
-  <ion-list>
-    <ion-item>
-      <ion-label>Your Name</ion-label>
-      <ion-input type="text" placeholder="Zeolearn" [(ngModel)]="yourName"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Accept terms and conditions</ion-label>
-      <ion-checkbox [(ngModel)]="tnc" (ionChange)="printName()"></ion-checkbox>
-    </ion-item>
-
-    <ion-radio-group [(ngModel)]="gender" (ionChange)="printName()">
-
-    <ion-list-header>
-        Select Gender
-      </ion-list-header>
-      <ion-item>
-        <ion-label>Male</ion-label>
-        <ion-radio value="male"></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-label>Female</ion-label>
-        <ion-radio value="female"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
-
-    <ion-item>
-      <ion-label>
-        City
-      </ion-label>
-      <ion-select [(ngModel)]="city" (ionChange)="printName()">
-        <ion-select-option>New Delhi</ion-select-option>
-        <ion-select-option>Mumbai</ion-select-option>
-        <ion-select-option>Bangaluru</ion-select-option>
-        <ion-select-option>Kolkata</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-button expand="block" color="danger" padding (click)="printName()"> Print Name</ion-button>
-  </ion-list>
+  <ion-button expand="block" color="danger" (click)="showLoading()">Show Loading</ion-button>
 
 </ion-content>

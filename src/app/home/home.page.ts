@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +9,23 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   trainingName: string = "Ionic Framework Training";
-  yourName: string = "Zeolearn";
-  tnc: boolean = false;
-  gender: string = "female";
-  city: string = "New Delhi";
   
-  constructor() {
+  constructor(private loadingCtrl: LoadingController) {
 
   }
 
-  printName(): void {
-    console.log(this.city);
+  async showLoading() {
+    let loading = await this.loadingCtrl.create({
+      message: "Loading data, please wait..."
+    });
+
+    await loading.present();
+
+    setTimeout(() => {
+      loading.dismiss();
+    }, 4000)
+
+    
   }
 
 }

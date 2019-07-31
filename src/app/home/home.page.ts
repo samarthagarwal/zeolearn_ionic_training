@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ export class HomePage {
 
   trainingName: string = "Ionic Framework Training";
   
-  constructor(private loadingCtrl: LoadingController) {
+  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController) {
 
   }
 
@@ -24,8 +24,29 @@ export class HomePage {
     setTimeout(() => {
       loading.dismiss();
     }, 4000)
+  }
 
-    
+  async showToast() {
+
+    let toast = await this.toastCtrl.create({
+      message: "Username or password is wrong. Try again.",
+      duration: 3000,
+      position: "top",
+      buttons: [{
+        text: "Try Again",
+        handler: () => {
+          console.log("Trying again....");
+        }
+      }, {
+        text: "Cancel",
+        handler: () => {
+          console.log("Canceling....");
+        }
+      }]
+    });
+
+    await toast.present();
+
   }
 
 }

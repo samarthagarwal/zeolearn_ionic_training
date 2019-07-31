@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-office',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfficePage implements OnInit {
 
-  constructor() { }
+  name: string;
+  age: number;
+
+  constructor(private navigationService: NavigationService) {
+    this.name = this.navigationService.get().name;
+    this.age = this.navigationService.get().age;
+    console.log(this.age)
+  }
 
   ngOnInit() {
   }

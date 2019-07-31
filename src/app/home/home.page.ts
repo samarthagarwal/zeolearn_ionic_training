@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { LoadingController, ToastController, AlertController, ActionSheetController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +11,9 @@ import { LoadingController, ToastController, AlertController, ActionSheetControl
 export class HomePage {
 
   trainingName: string = "Ionic Framework Training";
+  myName: number;
 
-  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController, private alertCtrl: AlertController, private actionsheetCtrl: ActionSheetController) {
+  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController, private alertCtrl: AlertController, private actionsheetCtrl: ActionSheetController, private router: Router, private navigationService: NavigationService) {
 
   }
 
@@ -122,6 +125,13 @@ export class HomePage {
 
     await actionsheet.present();
 
+  }
+
+  gotoOfficePage() {
+    this.navigationService.set({
+      "name": this.myName
+    });
+    this.router.navigate(['/office']);
   }
 
 }

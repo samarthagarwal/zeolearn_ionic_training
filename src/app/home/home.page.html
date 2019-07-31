@@ -1,37 +1,15 @@
 <ion-header>
   <ion-toolbar color="danger">
     <ion-title>
-      {{ trainingName }}
+      Ionic Framework Training
     </ion-title>
-
-    <ion-buttons slot="end">
-      <ion-button (click)="showPopover($event)">
-        <ion-icon slot="icon-only" name="more"></ion-icon>
-      </ion-button>
-    </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
-  <ion-button expand="block" color="danger" (click)="showLoading()">Show Loading</ion-button>
+  <ion-button expand="block" color="danger" (click)="execute()">Execute</ion-button>
 
-  <ion-button expand="block" color="danger" (click)="showToast()">Show Toast</ion-button>
-
-  <ion-button expand="block" color="danger" (click)="showAlert()">Show Alert</ion-button>
-
-  <ion-button expand="block" color="danger" (click)="showActionSheet()">Show Actionsheet</ion-button>
-
-  <ion-button expand="block" color="danger" (click)="showModal()">Show Modal</ion-button>
-
-  <ion-button expand="block" color="success"  routerLink="/office">Go To Office</ion-button>
-
-  <ion-list>
-    <ion-item>
-      <ion-label>Enter a number</ion-label>
-      <ion-input type="text" placeholder="zeolearn" [(ngModel)]="myName"></ion-input>
-    </ion-item>
-  </ion-list>
-  <ion-button expand="block" color="success" (click)="gotoOfficePage()">Go To Office</ion-button>
+  
 </ion-content>

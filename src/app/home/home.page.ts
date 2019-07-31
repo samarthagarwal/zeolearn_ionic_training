@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { LoadingController, ToastController, AlertController, ActionSheetController } from '@ionic/angular';
+import { LoadingController, ToastController, AlertController, ActionSheetController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { NavigationService } from '../navigation.service';
+import { ModalPage } from '../modal/modal.page';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomePage {
   trainingName: string = "Ionic Framework Training";
   myName: number;
 
-  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController, private alertCtrl: AlertController, private actionsheetCtrl: ActionSheetController, private router: Router, private navigationService: NavigationService) {
+  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController, private alertCtrl: AlertController, private actionsheetCtrl: ActionSheetController, private router: Router, private navigationService: NavigationService, private modalCtrl: ModalController) {
 
   }
 
@@ -132,6 +133,22 @@ export class HomePage {
       "name": this.myName
     });
     this.router.navigate(['/office']);
+  }
+
+  async showModal() {
+    let modal = await this.modalCtrl.create({
+      component: ModalPage,
+      componentProps: {
+        "name": this.myName
+      }
+    });
+
+    modal.onDidDismiss().then((data) => {
+      console.log("Modal is dismissed");
+      console.log(data);
+    });
+
+    await modal.present();
   }
 
 }

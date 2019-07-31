@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { LoadingController, ToastController, AlertController, ActionSheetController, ModalController } from '@ionic/angular';
+import { LoadingController, ToastController, AlertController, ActionSheetController, ModalController, PopoverController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { NavigationService } from '../navigation.service';
 import { ModalPage } from '../modal/modal.page';
+import { PopoverPage } from '../popover/popover.page';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomePage {
   trainingName: string = "Ionic Framework Training";
   myName: number;
 
-  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController, private alertCtrl: AlertController, private actionsheetCtrl: ActionSheetController, private router: Router, private navigationService: NavigationService, private modalCtrl: ModalController) {
+  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController, private alertCtrl: AlertController, private actionsheetCtrl: ActionSheetController, private router: Router, private navigationService: NavigationService, private modalCtrl: ModalController, private popoverCtrl: PopoverController) {
 
   }
 
@@ -149,6 +150,15 @@ export class HomePage {
     });
 
     await modal.present();
+  }
+
+  async showPopover(event) {
+    let popover = await this.popoverCtrl.create({
+      component: PopoverPage,
+      event: event
+    });
+
+    await popover.present();
   }
 
 }

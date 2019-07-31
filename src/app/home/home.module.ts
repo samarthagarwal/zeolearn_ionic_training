@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { ModalPageModule } from '../modal/modal.module';
+import { PopoverPageModule } from '../popover/popover.module';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { ModalPageModule } from '../modal/modal.module';
         component: HomePage
       }
     ]),
-    ModalPageModule
+    ModalPageModule,
+    PopoverPageModule
   ],
   declarations: [HomePage]
 })

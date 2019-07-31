@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingController, ToastController, AlertController } from '@ionic/angular';
+import { LoadingController, ToastController, AlertController, ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +9,8 @@ import { LoadingController, ToastController, AlertController } from '@ionic/angu
 export class HomePage {
 
   trainingName: string = "Ionic Framework Training";
-  
-  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController, private alertCtrl: AlertController) {
+
+  constructor(private loadingCtrl: LoadingController, private toastCtrl: ToastController, private alertCtrl: AlertController, private actionsheetCtrl: ActionSheetController) {
 
   }
 
@@ -73,7 +73,7 @@ export class HomePage {
         handler: () => {
           console.log("User tapped on Cancel button");
         }
-      },{
+      }, {
         text: "OK",
         handler: (data) => {
           console.log("User tapped on OK button");
@@ -83,6 +83,44 @@ export class HomePage {
     });
 
     await alert.present();
+
+  }
+
+  async showActionSheet() {
+
+    let actionsheet = await this.actionsheetCtrl.create({
+      header: "Choose Pizza",
+      subHeader: "Select your favorite type",
+      buttons: [{
+        text: "Abc",
+        handler: () => {
+          console.log("Abc")
+        },
+        icon: "pizza"
+      }, {
+        text: "Xyz",
+        handler: () => {
+          console.log("Xyz")
+        },
+        icon: "pizza"
+      }, {
+        text: "Efg",
+        handler: () => {
+          console.log("Efg")
+        },
+        icon: "pizza"
+      },
+      {
+        text: "Cancel",
+        handler: () => {
+          console.log("Cancel")
+        },
+        icon: "close",
+        role: "cancel"
+      }]
+    });
+
+    await actionsheet.present();
 
   }
 

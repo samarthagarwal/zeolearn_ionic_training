@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { LoadingController } from '@ionic/angular';
+import { User } from '../models/user.model';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,61 +11,34 @@ import { Observable } from 'rxjs';
 })
 export class HomePage {
 
-  name: string;
+  url: string = "https://jsonplaceholder.typicode.com/users";
+  users: any[] = [];
 
-  constructor() {
-
+  constructor(private httpClient: HttpClient, private loadingCtrl: LoadingController, private navigationService: NavigationService) {
+    this.getUsers();
   }
 
-  async execute() {
+  async getUsers() {
 
-    console.log("#1");
+    let loading = await this.loadingCtrl.create({
+      message: "Getting users..."
+    });
 
-    // this.getData().then(() => {
-    //   console.log("#2");
-    //   console.log(this.name);
-    // }).catch((error) => {
-    //   console.log("An error has occured", error);
-    // })
+    await loading.present();
 
-    // try {
-    //   let response = await this.getData();
-    //   console.log(response);
-    // } catch (ex) {
-    //   console.log(ex);
-    // }
-    // console.log("#3");
-
-    this.getData().toPromise().then((data) => {
+    this.httpClient.get(this.url).toPromise().then((data: any) => {
       console.log(data);
-    }).catch((err) => {
-      console.log(err)
-    })
-
-  }
-
-  // getData(): Promise<any> {
-  //   return new Promise((resolve, reject) => {
-  //     setTimeout(() => {
-  //       this.name = "Samarth";
-  //       resolve({
-  //         "status": "success"
-  //       });
-  //     }, 5000)
-  //   })
-  // }
-
-  getData(): Observable<any> {
-    return new Observable((observer) => {
-
-      let number = 0;
-
-      setInterval(() => {
-        observer.next(number)
-        number++;
-      }, 2000);
+      this.users = data;
+      loading.dismiss();
+    }).catch((error) => {
+      console.log(error);
+      loading.dismiss();
     })
   }
 
+  gotoDetails(user){
+    let u: User = new User(user);
+    this.navigationService.set(u);
+  }
 
 }

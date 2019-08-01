@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
+import { User } from './models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NavigationService {
 
-  data: any;
+  user: User;
 
   constructor() { }
 
   get() {
-    return this.data;
+    return this.user;
   }
 
-  set(data: any) {
-    this.data = data;
+  set(user: User) {
+    this.user = user;
   }
 }

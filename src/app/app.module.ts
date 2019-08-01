@@ -10,10 +10,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavigationService } from './navigation.service';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    HttpClientModule
+  ],
   providers: [
     NavigationService,
     StatusBar,
@@ -22,4 +29,4 @@ import { NavigationService } from './navigation.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

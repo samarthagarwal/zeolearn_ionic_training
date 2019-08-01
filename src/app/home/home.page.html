@@ -4,10 +4,20 @@
       Ionic Framework Training
     </ion-title>
 
+    <ion-buttons slot="end">
+      <ion-button (click)="clickPicture()">
+        <ion-icon slot="icon-only" name="camera"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-card *ngIf="imageString">
+    <ion-img [src]="imageString"></ion-img>
+  </ion-card>
 
   <ion-list>
     <ion-item *ngFor="let user of users">

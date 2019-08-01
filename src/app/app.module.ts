@@ -12,6 +12,9 @@ import { NavigationService } from './navigation.service';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { Camera } from '@ionic-native/camera/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
+    Camera,
+    Geolocation,
     NavigationService,
     StatusBar,
     SplashScreen,

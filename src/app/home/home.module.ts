@@ -5,8 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
-import { ModalPageModule } from '../modal/modal.module';
-import { PopoverPageModule } from '../popover/popover.module';
 
 @NgModule({
   imports: [
@@ -19,8 +17,6 @@ import { PopoverPageModule } from '../popover/popover.module';
         component: HomePage
       }
     ]),
-    ModalPageModule,
-    PopoverPageModule
   ],
   declarations: [HomePage]
 })

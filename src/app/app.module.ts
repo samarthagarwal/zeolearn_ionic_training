@@ -15,6 +15,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { Camera } from '@ionic-native/camera/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
+import * as firebase from 'firebase';
+
+firebase.initializeApp({
+  apiKey: "AIzaSyCS1EFvqnTr85Lvxd6ku-EirnbJ2d7Pvyg",
+  authDomain: "ioniczeolearn.firebaseapp.com",
+  databaseURL: "https://ioniczeolearn.firebaseio.com",
+  projectId: "ioniczeolearn",
+  storageBucket: "",
+  messagingSenderId: "738103354848",
+  appId: "1:738103354848:web:af877951cb8519ad"
+});
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

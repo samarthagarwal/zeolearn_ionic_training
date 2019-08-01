@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>My Todos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button color="danger" (click)="create()">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let todo of todos">
+      <ion-label>
+        <h2>{{ todo.todo_text }} </h2>
+        <h3>Finish by {{ formatDate(todo.todo_date) }}</h3>
+        <p>Created on {{ formatDate(todo.created) }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

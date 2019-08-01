@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="danger">
+
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+
+
+      <ion-title>
+        Signup for TodoApp
+      </ion-title>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" color="danger" (click)="signup()">Sign Up</ion-button>
+    <ion-button expand="block" fill="clear" color="danger" (click)="goBack()">Already have an acccount? Login</ion-button>
+  
+  </ion-content>
